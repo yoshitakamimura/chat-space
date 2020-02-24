@@ -1,0 +1,19 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        karimen
+      %ul.side-header__box__menu
+        %li.side-header__box__new-group
+          = link_to new_group_path do
+            = icon('fas', 'edit')
+        %li.side-header__box__edit-user
+          = link_to edit_user_path(current_user.id) do
+            = icon('fas', 'cog')
+  .side-groups
+    = link_to "#", class:"group" do
+      .group
+        %p.group__group-name
+          test
+        %p.group__latest-message
+          test2
